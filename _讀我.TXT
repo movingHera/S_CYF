@@ -13,4 +13,4 @@ IEEE-TEVC
 7) 預測/4.第四預測.SQL
 8) 預測/5.合併.SQL
 
-SQL文件中涉及到的MR、UDF分別見MR、UDF目錄。
+SQL文件中涉及到的MR、UDF分別見 預測/MR、預測/UDF 目錄。
