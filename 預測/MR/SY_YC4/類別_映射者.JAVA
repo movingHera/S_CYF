@@ -1,4 +1,4 @@
-﻿package cgz.sy.cyf.yc4;
+package cgz.sy.cyf.yc4;
 
 public class 類別_映射者 extends com.aliyun.odps.mapred.MapperBase
 {
@@ -29,7 +29,7 @@ public class 類別_映射者 extends com.aliyun.odps.mapred.MapperBase
 			String[] 數組_商品購買字串 = 記錄.getString("gmitems").split(",");
 			java.util.HashMap<Long, 類別_商品購買> 雜湊團_商品購買_訓練集 = new java.util.HashMap<Long, 類別_商品購買>();
 			java.util.Vector<類別_商品購買> 向量_商品購買_測試集 = new java.util.Vector<類別_商品購買>();
-	
+			
 			for(String 商品購買字串 : 數組_商品購買字串)
 			{
 				String[] 數組_商品購買 = 商品購買字串.split(":");
