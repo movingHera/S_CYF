@@ -29,11 +29,11 @@ public class 類別_歸約者 extends com.aliyun.odps.mapred.ReducerBase
 			{    	
 				if(!搭配類目字串.equals(""))
 				{
-					String[] 數組_搭配類目 = 搭配類目字串.split(",");
-					for(String 搭配類目 : 數組_搭配類目)
+					String[] 陣列_搭配類目 = 搭配類目字串.split(",");
+					for(String 搭配類目 : 陣列_搭配類目)
 					{
-						String[] 數組_搭配類目標識_權值 = 搭配類目.split(":");
-						雜湊圖_搭配類目.put(Long.parseLong(數組_搭配類目標識_權值[0]), Long.parseLong(數組_搭配類目標識_權值[1]));
+						String[] 陣列_搭配類目標識_權值 = 搭配類目.split(":");
+						雜湊圖_搭配類目.put(Long.parseLong(陣列_搭配類目標識_權值[0]), Long.parseLong(陣列_搭配類目標識_權值[1]));
 					}
 				}
 			}
