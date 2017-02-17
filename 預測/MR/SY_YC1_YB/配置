@@ -1,6 +1,6 @@
 ﻿resourceName	SY_YC1_YB
-mapper		cgz.sy.cyf.yc1.類別_映射者
-reducer		cgz.sy.cyf.yc1.類別_歸約者
+mapper		cgz.sy.cyf.yc1_yb.類別_映射者
+reducer		cgz.sy.cyf.yc1_yb.類別_歸約者
 mapOutputKey	ITEM_ID:BIGINT, CAT_ID:BIGINT, TERMMS:STRING
 mapOutputValue	TLITEM_ID:BIGINT, TLITEM_TERMMS:STRING, TLITEM_DPITEMS:STRING
 inputTables	SY_ITEM_TLITEM
