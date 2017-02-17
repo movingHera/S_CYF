@@ -1,4 +1,4 @@
-﻿package cgz.sy.cyf.yc1;
+package cgz.sy.cyf.yc1;
 
 public class 類別_歸約者 extends com.aliyun.odps.mapred.ReducerBase
 {	
@@ -11,7 +11,7 @@ public class 類別_歸約者 extends com.aliyun.odps.mapred.ReducerBase
 	  
 	public void reduce(com.aliyun.odps.data.Record 鍵, java.util.Iterator<com.aliyun.odps.data.Record> 迭代_值, TaskContext 上下文) throws java.io.IOException
 	{
-		結果.setBigint(0, 鍵.getBigint("item_id"));
+		結果.setBigint("item_id", 鍵.getBigint("item_id"));
 		java.util.Vector<類別_候選商品> 向量_候選商品 = new java.util.Vector<類別_候選商品>();
     	
 		while(迭代_值.hasNext())
@@ -28,8 +28,8 @@ public class 類別_歸約者 extends com.aliyun.odps.mapred.ReducerBase
     	
 		for(int 甲 = 0; 甲 < 向量_候選商品.size(); 甲++)
 		{
-			結果.setBigint(1, 向量_候選商品.get(甲).標識);
-			結果.setDouble(2, 向量_候選商品.get(甲).搭配度 * 向量_候選商品.get(甲).套參數);
+			結果.setBigint("hxitem_id", 向量_候選商品.get(甲).標識);
+			結果.setDouble("hxitem_dpd", 向量_候選商品.get(甲).搭配度 * 向量_候選商品.get(甲).套參數);
 			上下文.write(結果);
 		}	
 	}
