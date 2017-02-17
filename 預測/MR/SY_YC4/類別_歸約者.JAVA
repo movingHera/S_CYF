@@ -4,14 +4,14 @@ public class 類別_歸約者 extends com.aliyun.odps.mapred.ReducerBase
 {	
 	private com.aliyun.odps.data.Record 結果;
 	
-	public void setup(TaskContext context) throws java.io.IOException
+	public void setup(TaskContext 上下文) throws java.io.IOException
 	{
-		結果 = context.createOutputRecord();
+		結果 = 上下文.createOutputRecord();
 	}
     
-	public void reduce(com.aliyun.odps.data.Record 鍵, java.util.Iterator<com.aliyun.odps.data.Record> 迭代_值, TaskContext context) throws java.io.IOException
+	public void reduce(com.aliyun.odps.data.Record 鍵, java.util.Iterator<com.aliyun.odps.data.Record> 迭代_值, TaskContext 上下文) throws java.io.IOException
 	{
-		結果.setBigint(0, 鍵.getBigint("item_id"));
+		結果.setBigint("item_id", 鍵.getBigint("item_id"));
 		java.util.HashMap<Long, Long> 雜湊圖_搭配類目 = new java.util.HashMap<Long, Long>();
 		java.util.HashMap<Long, Double> 雜湊圖_搭配購買商品 = new java.util.HashMap<Long, Double>();
 		java.util.HashMap<Long, Long> 雜湊圖_商品_類目 = new java.util.HashMap<Long, Long>();
@@ -64,7 +64,7 @@ public class 類別_歸約者 extends com.aliyun.odps.mapred.ReducerBase
 		{
 			結果.setBigint(1, 搭配購買商品.商品標識);
 			結果.setDouble(2, 搭配購買商品.搭配度);
-			context.write(結果);
+			上下文.write(結果);
 		}		
 	}
     
