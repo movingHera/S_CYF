@@ -19,14 +19,14 @@ public class 類別_歸約者 extends com.aliyun.odps.mapred.ReducerBase
 		if(詞權字串.equals(""))
 			return;
     	
-		String[] 數組_詞權 = 詞權字串.split(",");
+		String[] 陣列_詞權 = 詞權字串.split(",");
 		double 詞進值長 = 0;
-		for(String 詞_詞權 : 數組_詞權)
+		for(String 詞_詞權 : 陣列_詞權)
 		{
-			String[] 數組_詞_詞權 = 詞_詞權.split(":");
-			double 詞進值 = 1 / Math.log(Double.parseDouble(數組_詞_詞權[1]) * 800000 + 32);		
+			String[] 陣列_詞_詞權 = 詞_詞權.split(":");
+			double 詞進值 = 1 / Math.log(Double.parseDouble(陣列_詞_詞權[1]) * 800000 + 32);		
 			詞進值長 += 詞進值 * 詞進值;
-			雜湊圖_詞權.put(數組_詞_詞權[0], 詞進值);
+			雜湊圖_詞權.put(陣列_詞_詞權[0], 詞進值);
 		}
     	
 		while(迭代_值.hasNext())
@@ -38,22 +38,22 @@ public class 類別_歸約者 extends com.aliyun.odps.mapred.ReducerBase
 			if(候選商品詞權字串.equals(""))
 				continue;
     		
-			String[] 數組_候選商品詞權 = 候選商品詞權字串.split(",");
+			String[] 陣列_候選商品詞權 = 候選商品詞權字串.split(",");
 
 			double 詞進值內積 = 0;
 			java.util.HashSet<String> 雜湊集_候選商品_標題分詞 = new java.util.HashSet<String>();
-			for(String 詞_詞權 : 數組_候選商品詞權)
+			for(String 詞_詞權 : 陣列_候選商品詞權)
 			{
-				String[] 數組_詞_詞權 = 詞_詞權.split(":");
-				if(雜湊集_候選商品_標題分詞.contains(數組_詞_詞權[0]))
+				String[] 陣列_詞_詞權 = 詞_詞權.split(":");
+				if(雜湊集_候選商品_標題分詞.contains(陣列_詞_詞權[0]))
 					continue;
 
-				雜湊集_候選商品_標題分詞.add(數組_詞_詞權[0]);
+				雜湊集_候選商品_標題分詞.add(陣列_詞_詞權[0]);
         		
-				double 詞進值 = 1 / Math.log(Double.parseDouble(數組_詞_詞權[1]) * 800000 + 32);
+				double 詞進值 = 1 / Math.log(Double.parseDouble(陣列_詞_詞權[1]) * 800000 + 32);
 
-				if(雜湊圖_詞權.containsKey(數組_詞_詞權[0]))       			
-					詞進值內積 += 雜湊圖_詞權.get(數組_詞_詞權[0]) * 詞進值;
+				if(雜湊圖_詞權.containsKey(陣列_詞_詞權[0]))       			
+					詞進值內積 += 雜湊圖_詞權.get(陣列_詞_詞權[0]) * 詞進值;
 			}
         	
 			if(詞進值內積 == 0)
