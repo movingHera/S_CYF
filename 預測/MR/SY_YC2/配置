@@ -4,4 +4,4 @@ reducer		cgz.sy.cyf.yc2.類別_歸約者
 mapOutputKey	ITEM_ID:BIGINT, CAT_ID:BIGINT, TERMMS:STRING
 mapOutputValue	HXITEM_ID:BIGINT, HXITEM_CAT_ID:BIGINT, HXITEM_TERMMS:STRING
 inputTables	SY_ITEM_HXITEM2
-outputTable	SY_ITEM_YCITEM2
+outputTable	SY_ITEM_YCITEM
