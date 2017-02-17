@@ -1,4 +1,4 @@
-﻿resourceName	SY_YC1
+resourceName	SY_YC1
 mapper		cgz.sy.cyf.yc1.類別_映射者
 reducer		cgz.sy.cyf.yc1.類別_歸約者
 mapOutputKey	ITEM_ID:BIGINT
