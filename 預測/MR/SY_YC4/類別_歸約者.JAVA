@@ -62,8 +62,8 @@ public class 類別_歸約者 extends com.aliyun.odps.mapred.ReducerBase
     	
 		for(類別_搭配購買商品 搭配購買商品 : 向量_搭配購買商品)
 		{
-			結果.setBigint(1, 搭配購買商品.商品標識);
-			結果.setDouble(2, 搭配購買商品.搭配度);
+			結果.setBigint("hxitem_id", 搭配購買商品.商品標識);
+			結果.setDouble("hxitem_dpd", 搭配購買商品.搭配度);
 			上下文.write(結果);
 		}		
 	}
