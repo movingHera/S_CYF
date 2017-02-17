@@ -1,4 +1,4 @@
-﻿package cgz.sy.cyf.yc1;
+package cgz.sy.cyf.yc1;
 
 public class 類別_映射者 extends com.aliyun.odps.mapred.MapperBase
 {
