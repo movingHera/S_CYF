@@ -1,6 +1,6 @@
-resourceName	SY_YC2
-mapper		cgz.sy.cyf.yc2.類別_映射者
-reducer		cgz.sy.cyf.yc2.類別_歸約者
+resourceName	SY_PREDICT2
+mapper		cgz.sy.cyf.predict2.MyMapper
+reducer		cgz.sy.cyf.predict2.MyReducer
 mapOutputKey	ITEM_ID:BIGINT, CAT_ID:BIGINT, TERMMS:STRING
 mapOutputValue	HXITEM_ID:BIGINT, HXITEM_CAT_ID:BIGINT, HXITEM_TERMMS:STRING
 inputTables	SY_ITEM_HXITEM2
