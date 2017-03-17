@@ -32,4 +32,5 @@ CREATE TABLE SY_ITEM_YCITEM2
 	, YCITEM_ID BIGINT
 	, YCITEM_DPD DOUBLE
 );
+
 JAR -libjars sy_predict2.jar;
