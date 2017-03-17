@@ -1,8 +1,8 @@
 package cgz.sy.cyf.predict1;
 
-import com.aliyun.odps.data
-import com.aliyun.odps.mapred
-import java.io
+import com.aliyun.odps.data;
+import com.aliyun.odps.mapred;
+import java.io;
 
 public class MyMapper extends MapperBase
 {
