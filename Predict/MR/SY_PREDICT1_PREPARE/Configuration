@@ -4,4 +4,4 @@ reducer		cgz.sy.cyf.predict1_prepare.MyReducer
 mapOutputKey	ITEM_ID:BIGINT, CAT_ID:BIGINT, TERMMS:STRING
 mapOutputValue	TLITEM_ID:BIGINT, TLITEM_TERMMS:STRING, TLITEM_DPITEMS:STRING
 inputTables	SY_ITEM_TLITEM
-outputTable	SY_ITEM_YBITEM12
+outputTable	SY_ITEM_YBITEM1
