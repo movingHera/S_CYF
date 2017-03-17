@@ -1,5 +1,5 @@
 resourceName	SY_PREDICT1
-mapper		cgz.sy.cyf.predict1.MyMapper
+mapper		cgz.sy.cyf.predict1.MyMapper2
 reducer		cgz.sy.cyf.predict1.MyReducer
 mapOutputKey	ITEM_ID:BIGINT
 mapOutputValue	HXITEM_ID:BIGINT, HXITEM_DPD:DOUBLE, HXITEM_TCS:BIGINT
