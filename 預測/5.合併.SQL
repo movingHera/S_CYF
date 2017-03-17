@@ -4,4 +4,4 @@ CREATE TABLE IF NOT EXISTS FM_SUBMISSIONS
 	, ITEM_LIST STRING
 );
 
-JAR -libjars SY_YC.jar
+JAR -libjars sy_predict.jar
