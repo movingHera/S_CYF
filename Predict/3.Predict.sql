@@ -51,4 +51,4 @@ CREATE TABLE SY_ITEM_YCITEM3
 	, YCITEM_DPD DOUBLE
 );
 
-JAR -libjars sy_predict3.jar;
+JAR SY_PREDICT3.jar;
