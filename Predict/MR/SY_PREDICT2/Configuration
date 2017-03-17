@@ -3,5 +3,5 @@ mapper		cgz.sy.cyf.predict2.MyMapper
 reducer		cgz.sy.cyf.predict2.MyReducer
 mapOutputKey	ITEM_ID:BIGINT, CAT_ID:BIGINT, TERMMS:STRING
 mapOutputValue	HXITEM_ID:BIGINT, HXITEM_CAT_ID:BIGINT, HXITEM_TERMMS:STRING
-inputTables	SY_ITEM_HXITEM2
+inputTables	SY_ITEM_HXITEM22
 outputTable	SY_ITEM_YCITEM2
